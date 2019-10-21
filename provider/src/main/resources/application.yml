@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: dubbo-provider
+server:
+  port: 9090
+dubbo:
+  registry:
+    protocol: zookeeper
+    address: 10.4.79.11:2181
+    id: registry-1
+  protocol:
+    port: 12345
+    name: dubbo
+    id: dubbo
+    status: server
+  application:
+    name: dubbo-provider-name-1
+    id: dubbo-provider-id-1
+    qos-enable: true
+    qos-port: 22222
+  scan:
+    basePackages: com.learning.dubbo.demo.provider.api
+api:
+  service:
+    version: 1.0.0
